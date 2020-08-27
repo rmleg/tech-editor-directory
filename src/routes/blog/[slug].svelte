@@ -54,11 +54,18 @@
 </style>
 
 <svelte:head>
-	<title>{post.title}</title>
+	<title>{post.name}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
+<h1>{post.name}</h1>
 
 <div class='content'>
+	{#if post.crafts}
+		<p><strong>Craft(s): </strong> {post.crafts}</p>
+	{/if}
+	{#if post.additionalServices}
+		<p><strong>Services: </strong> {post.additionalServices}</p>
+	{/if}
+	
 	{@html post.html}
 </div>

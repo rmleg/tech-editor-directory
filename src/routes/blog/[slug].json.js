@@ -6,7 +6,7 @@ import grayMatter from "gray-matter";
 import marked from "marked";
 
 const getPost = (fileName) =>
-  fs.readFileSync(path.resolve("content", `${fileName}.md`), "utf-8");
+  fs.readFileSync(path.resolve("directory", `${fileName}.md`), "utf-8");
 
 /* const lookup = new Map();
 posts.forEach((post) => {
@@ -27,7 +27,9 @@ export function get(req, res, next) {
 
   const html = marked(content);
 
-  if (html) {
+  const name = data.name;
+
+  if (name) {
     res.writeHead(200, {
       "Content-Type": "application/json",
     });
