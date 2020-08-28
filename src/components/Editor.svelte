@@ -51,6 +51,7 @@ export let typesOfProjects;
 
     a {
         padding: .5rem 1rem;
+        margin-top: 2rem;
         border: 1px solid #00838F;
         border-radius: 5px;
         text-decoration: none;
@@ -58,6 +59,8 @@ export let typesOfProjects;
         color: #fff;
         font-weight: bold;
         transition: all .3s ease;
+        display: block;
+        text-align: center;
     }
 
     a:hover {

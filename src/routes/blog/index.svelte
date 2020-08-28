@@ -8,9 +8,9 @@
 
 <script>
 	import Editor from '../../components/Editor.svelte';
-import Index from '../index.svelte';
+/* import Index from '../index.svelte';
 import Error from '../_error.svelte';
-import Layout from '../_layout.svelte';
+import Layout from '../_layout.svelte'; */
 	export let posts;
 </script>
 
