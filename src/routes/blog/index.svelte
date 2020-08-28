@@ -7,28 +7,31 @@
 </script>
 
 <script>
+	import Editor from '../../components/Editor.svelte';
+import Index from '../index.svelte';
+import Error from '../_error.svelte';
+import Layout from '../_layout.svelte';
 	export let posts;
 </script>
 
 <style>
-	ul {
-		margin: 0 0 1em 0;
-		line-height: 1.5;
+	.editor-container {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		justify-content: flex-start;
+		align-items: flex-start;
 	}
 </style>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>Directory</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
-
-<ul>
+<div class="editor-container">
 	{#each posts as post}
-		<!-- we're using the non-standard `rel=prefetch` attribute to
-				tell Sapper to load the data for the page as soon as
-				the user hovers over the link or taps it, instead of
-				waiting for the 'click' event -->
-		<li><a rel='prefetch' href='blog/{post.slug}'>{post.name}</a></li>
+
+		<Editor {...post} />
+	
 	{/each}
-</ul>
+</div>
