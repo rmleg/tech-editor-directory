@@ -73,6 +73,10 @@
     text-transform: uppercase;
   }
 
+  summary:hover {
+    cursor: pointer;
+  }
+
   .inputs {
     padding-top: 0.75rem;
     border-top: 2px solid #006d77;
