@@ -85,9 +85,15 @@
     }
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 730px) {
     .filter-group {
       width: 50%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .filter-group {
+      width: 100%;
     }
   }
 </style>
