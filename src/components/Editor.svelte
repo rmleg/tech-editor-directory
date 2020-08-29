@@ -6,9 +6,8 @@
   export let additionalServices;
   export let typesOfProjects;
 
-  const alphabetize = (input) => {
-    const arrayFromInput = input.split(", ");
-    const sortedString = arrayFromInput.sort().join(", ");
+  const formatAlpha = (input) => {
+    const sortedString = input.sort().join(", ");
     return sortedString;
   };
 </script>
@@ -69,27 +68,27 @@
 
   <p>
     <strong>Crafts:</strong>
-    {alphabetize(crafts)}
+    {formatAlpha(crafts)}
   </p>
 
   {#if specialties}
     <p>
       <strong>Specialties:</strong>
-      {alphabetize(specialties)}
+      {formatAlpha(specialties)}
     </p>
   {/if}
 
   {#if additionalServices}
     <p>
       <strong>Additional Services:</strong>
-      {alphabetize(additionalServices)}
+      {formatAlpha(additionalServices)}
     </p>
   {/if}
 
   {#if typesOfProjects}
     <p>
       <strong>Types of Projects:</strong>
-      {alphabetize(typesOfProjects)}
+      {formatAlpha(typesOfProjects)}
     </p>
   {/if}
 

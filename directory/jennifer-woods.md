@@ -2,10 +2,12 @@
 slug: "jennifer-woods"
 name: Jennifer Woods
 website: https://misswren.wordpress.com/tech-editing/
-crafts: knitting
+crafts:
+  - knitting
 specialties:
-languages: English
+languages:
+  - English
 additionalServices:
-typesOfProjects: accessories
-willGrade: false
+typesOfProjects:
+  - accessories
 ---
