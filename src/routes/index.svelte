@@ -7,6 +7,7 @@
 </script>
 
 <script>
+	import Filters from '../components/Filters.svelte'
 	import Editor from '../components/Editor.svelte';
 	export let editors;
 </script>
@@ -24,6 +25,8 @@
 <svelte:head>
 	<title>Directory</title>
 </svelte:head>
+
+<Filters />
 
 <div class="editor-container">
 	{#each editors as editor}

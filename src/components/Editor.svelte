@@ -7,26 +7,6 @@ export let additionalServices;
 export let typesOfProjects;
 </script>
 
-<div class="editor-card">
-<h2>{name}</h2>
-
-<p><strong>Crafts:</strong> {crafts}</p>
-
-{#if specialties}
-<p><strong>Specialties:</strong> {specialties}</p>
-{/if}
-
-{#if additionalServices}
-<p><strong>Additional Services:</strong> {additionalServices}</p>
-{/if}
-
-{#if typesOfProjects}
-<p><strong>Types of Projects:</strong> {typesOfProjects}</p>
-{/if}
-
-<a href="{website}">Website</a>
-</div>
-
 <style>
     .editor-card {
         width: 30%;
@@ -77,3 +57,23 @@ export let typesOfProjects;
         outline: 0;
     }
 </style>
+
+<div class="editor-card">
+    <h2>{name}</h2>
+
+    <p><strong>Crafts:</strong> {crafts}</p>
+
+    {#if specialties}
+    <p><strong>Specialties:</strong> {specialties}</p>
+    {/if}
+
+    {#if additionalServices}
+    <p><strong>Additional Services:</strong> {additionalServices}</p>
+    {/if}
+
+    {#if typesOfProjects}
+    <p><strong>Types of Projects:</strong> {typesOfProjects}</p>
+    {/if}
+
+    <a href="{website}">Website</a>
+</div>
