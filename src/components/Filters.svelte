@@ -8,6 +8,7 @@
     if (e.target.checked) {
       // if checked, add to filter.crafts
       $filters[e.target.dataset.key].push(e.target.name);
+      console.log($filters);
     } else {
       // if not checked, remove from filter.crafts
       let index = $filters[e.target.dataset.key].indexOf(e.target.name);
@@ -40,18 +41,20 @@
       "test knitting management",
       "written instructions from charts",
     ],
-    typesOfProjects: ["accessories", "garments", "toys"],
     specialties: [
-      "accessories",
       "knitCompanion",
       "socks",
       "working with non-native English speakers",
     ],
+    typesOfProjects: ["accessories", "garments", "toys"],
   };
 </script>
 
 <style>
-
+  #filters {
+    display: flex;
+    flex-wrap: wrap;
+  }
 </style>
 
 <div id="filters">
@@ -67,6 +70,7 @@
           name={craft}
           on:change={(e) => handleChange(e)} />
         <label for={craft}>{craft}</label>
+        <br />
       {/each}
 
     </fieldset>
@@ -84,6 +88,7 @@
           name={language}
           on:change={(e) => handleChange(e)} />
         <label for={language}>{language}</label>
+        <br />
       {/each}
     </fieldset>
   </div>
@@ -99,6 +104,7 @@
           name={service}
           on:change={(e) => handleChange(e)} />
         <label for={service}>{service}</label>
+        <br />
       {/each}
     </fieldset>
   </div>
@@ -114,6 +120,7 @@
           name={specialty}
           on:change={(e) => handleChange(e)} />
         <label for={specialty}>{specialty}</label>
+        <br />
       {/each}
     </fieldset>
   </div>
@@ -129,6 +136,7 @@
           name={type}
           on:change={(e) => handleChange(e)} />
         <label for={type}>{type}</label>
+        <br />
       {/each}
     </fieldset>
   </div>

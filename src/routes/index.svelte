@@ -18,12 +18,10 @@
   let filteredEditors = editors;
 
   const checkIfEditorDoesThis = (editor, filterName, filterOption) => {
-    // so far this is working for a single seleciton. haven't tested multiple selectinos.
     // for each item in filter array, see if this is in the editor's details
     // if all of them are there, return true
     // else return false if any of them is not here
     if (!editor[filterName]) {
-      // console.log(`${editor.name} doesn't do ${filterName}: ${filterOption}`);
       // if they don't have anything listed for this filter, return false
       return false;
     } else {
@@ -31,7 +29,6 @@
       // if it doesn't, return false
       const index = editor[filterName].indexOf(filterOption);
       if (index < 0) {
-        // console.log(`${editor.name} doesn't do ${filterName}: ${filterOption}`);
         return false;
       }
     }
@@ -42,13 +39,14 @@
     // display the editor until they DON'T match a filter
     let show = true;
     for (let filter in $filters) {
+      // iterate through each filter, e.g. specialties, crafts
       if (show == false) {
         return false;
       }
-      // iterate through each possible filter group
+
       if ($filters[filter].length > 0) {
-        // if there are filters in that group, not an empty array
-        // check if that editor has those things
+        // if this editor has items in this filter array
+        // check if the item is in that array
         // only display the editor if they match ALL filters
 
         $filters[filter].forEach((option) => {
@@ -57,14 +55,15 @@
             return false;
           }
           let doesThis = checkIfEditorDoesThis(editor, filter, option);
-
+          console.log(doesThis);
           if (!doesThis) {
             show = false;
+            return false;
           }
         });
       }
     }
-    return true;
+    return show;
   };
 
   const getFilteredEditors = () => {
