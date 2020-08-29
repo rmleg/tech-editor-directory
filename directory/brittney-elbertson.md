@@ -5,7 +5,7 @@ website: https://spunfiberco.wordpress.com/
 crafts: knitting
 specialties:
 languages: English
-additionalServices: charts, schematic, romance text, pattern layout design
+additionalServices: charts, schematics, romance text, pattern layout
 typesOfProjects:
 willGrade:
 ---

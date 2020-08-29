@@ -5,7 +5,7 @@ website: http://knittinginflipflops.blogspot.com/p/tech-editing-by-eleanor-dixon
 crafts: knitting
 specialties:
 languages: English
-additionalServices: charts, schematics, chart to written instructions, test knitting management, pattern development, style sheet assistance, pattern template/layout assistance, pattern support
+additionalServices: charts, schematics, chart to written instructions, test knitting management, pattern development, style sheet creation, pattern layout, pattern support
 typesOfProjects: accessories, garments
 willGrade:
 ---

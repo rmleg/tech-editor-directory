@@ -6,6 +6,6 @@ crafts: knitting, crochet
 specialties:
 languages: English
 additionalServices: charts, schematics, pattern writing
-typesOfProjects: lace, cables, entrelac, steeking, intarsia, stranded colorwork, Tunisian crochet, hairpin lace, broomstick lace, tapestry, amigurumi, toys, shawls, seamed garments, seamless garments
+typesOfProjects: toys, accessories, garments
 willGrade: false
 ---
