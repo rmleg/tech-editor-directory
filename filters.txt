@@ -1,6 +1,6 @@
-will grade
-types of projects
-extra services
-specialties
-languages
-crafts
+will grade - bool
+types of projects - list
+extra services - list
+specialties - list
+languages - list
+crafts - list

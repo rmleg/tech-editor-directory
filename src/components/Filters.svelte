@@ -1,5 +1,8 @@
 <script>
   import { filters } from "../stores";
+  import { createEventDispatcher } from "svelte";
+
+  const dispatch = createEventDispatcher();
 
   const handleChange = (e) => {
     if (e.target.checked) {
@@ -12,11 +15,11 @@
         $filters[e.target.dataset.key].splice(index, 1);
       }
     }
-    console.log($filters);
+    dispatch("filtersChanged");
   };
 
   const options = {
-    crafts: ["Knitting", "Crochet"],
+    crafts: ["knitting", "crochet"],
     languages: ["Dutch", "English", "German", "French", "Italian"],
     additionalServices: [
       "charts",

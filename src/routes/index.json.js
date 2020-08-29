@@ -15,6 +15,6 @@ export function get(req, res) {
   res.writeHead(200, {
     "Content-Type": "application/json",
   });
-  const editors = getAllPosts();
+  editors = getAllPosts();
   res.end(JSON.stringify(editors));
 }

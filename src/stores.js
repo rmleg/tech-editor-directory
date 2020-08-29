@@ -1,11 +1,9 @@
-import { writable } from 'svelte/store';
-
-export const willGradeChecked = writable(false);
+import { writable } from "svelte/store";
 
 export const filters = writable({
-    additionalServices: [],
-    crafts: [],
-    specialties: [],
-    languages: [],
-    typesOfProjects: [],
+  additionalServices: [],
+  crafts: [],
+  specialties: [],
+  languages: [],
+  typesOfProjects: [],
 });
