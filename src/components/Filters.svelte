@@ -73,6 +73,8 @@
   }
 </style>
 
+<p>Filter tech editors:</p>
+
 <div id="filters">
 
   <div class="filter-group">
