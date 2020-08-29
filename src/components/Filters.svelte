@@ -55,89 +55,115 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  .filter-group {
+    width: 20%;
+  }
+
+  @media (max-width: 920px) {
+    .filter-group {
+      width: 33%;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .filter-group {
+      width: 50%;
+    }
+  }
 </style>
 
 <div id="filters">
 
   <div class="filter-group">
     <fieldset>
-      <legend>Craft(s)</legend>
-      {#each options.crafts as craft}
-        <input
-          data-key="crafts"
-          type="checkbox"
-          id={craft}
-          name={craft}
-          on:change={(e) => handleChange(e)} />
-        <label for={craft}>{craft}</label>
-        <br />
-      {/each}
-
-    </fieldset>
-
-  </div>
-
-  <div class="filter-group">
-    <fieldset>
-      <legend>Language(s)</legend>
-      {#each options.languages as language}
-        <input
-          data-key="languages"
-          type="checkbox"
-          id={language}
-          name={language}
-          on:change={(e) => handleChange(e)} />
-        <label for={language}>{language}</label>
-        <br />
-      {/each}
+      <details>
+        <summary>Craft(s)</summary>
+        {#each options.crafts as craft}
+          <input
+            data-key="crafts"
+            type="checkbox"
+            id={craft}
+            name={craft}
+            on:change={(e) => handleChange(e)} />
+          <label for={craft}>{craft}</label>
+          <br />
+        {/each}
+      </details>
     </fieldset>
   </div>
 
   <div class="filter-group">
     <fieldset>
-      <legend>Additional Services</legend>
-      {#each options.additionalServices as service}
-        <input
-          data-key="additionalServices"
-          type="checkbox"
-          id={service}
-          name={service}
-          on:change={(e) => handleChange(e)} />
-        <label for={service}>{service}</label>
-        <br />
-      {/each}
+      <details>
+        <summary>Language(s)</summary>
+        {#each options.languages as language}
+          <input
+            data-key="languages"
+            type="checkbox"
+            id={language}
+            name={language}
+            on:change={(e) => handleChange(e)} />
+          <label for={language}>{language}</label>
+          <br />
+        {/each}
+      </details>
     </fieldset>
   </div>
 
   <div class="filter-group">
     <fieldset>
-      <legend>Specialties</legend>
-      {#each options.specialties as specialty}
-        <input
-          data-key="specialties"
-          type="checkbox"
-          id={specialty}
-          name={specialty}
-          on:change={(e) => handleChange(e)} />
-        <label for={specialty}>{specialty}</label>
-        <br />
-      {/each}
+      <details>
+        <summary>Additional Services</summary>
+        {#each options.additionalServices as service}
+          <input
+            data-key="additionalServices"
+            type="checkbox"
+            id={service}
+            name={service}
+            on:change={(e) => handleChange(e)} />
+          <label for={service}>{service}</label>
+          <br />
+        {/each}
+      </details>
+
     </fieldset>
   </div>
 
   <div class="filter-group">
     <fieldset>
-      <legend>Types of Projects</legend>
-      {#each options.typesOfProjects as type}
-        <input
-          data-key="typesOfProjects"
-          type="checkbox"
-          id={type}
-          name={type}
-          on:change={(e) => handleChange(e)} />
-        <label for={type}>{type}</label>
-        <br />
-      {/each}
+      <details>
+        <summary>Specialties</summary>
+        {#each options.specialties as specialty}
+          <input
+            data-key="specialties"
+            type="checkbox"
+            id={specialty}
+            name={specialty}
+            on:change={(e) => handleChange(e)} />
+          <label for={specialty}>{specialty}</label>
+          <br />
+        {/each}
+      </details>
+
+    </fieldset>
+  </div>
+
+  <div class="filter-group">
+    <fieldset>
+      <details>
+        <summary>Types of Projects</summary>
+        {#each options.typesOfProjects as type}
+          <input
+            data-key="typesOfProjects"
+            type="checkbox"
+            id={type}
+            name={type}
+            on:change={(e) => handleChange(e)} />
+          <label for={type}>{type}</label>
+          <br />
+        {/each}
+      </details>
     </fieldset>
   </div>
 
