@@ -78,6 +78,7 @@
     width: 100%;
     justify-content: flex-start;
     align-items: flex-start;
+    padding-top: 1rem;
   }
 </style>
 
