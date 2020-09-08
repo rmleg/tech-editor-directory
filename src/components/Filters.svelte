@@ -21,7 +21,15 @@
 
   const options = {
     crafts: ["knitting", "crochet"],
-    languages: ["Dutch", "English", "German", "French", "Italian"],
+    languages: [
+      "Dutch",
+      "English",
+      "German",
+      "French",
+      "Italian",
+      "Spanish",
+      "Greek",
+    ],
     additionalServices: [
       "charts",
       "charts from written instructions",
